@@ -1,0 +1,21 @@
+<h1 id="tableLabel">Personas</h1>
+<p *ngIf="!people"><em>Cargando...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="people">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Is Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people">
+      <td>{{ person.id }}</td>
+      <td>{{ person.name }}</td>
+      <td>{{ person.email }}</td>
+      <td>{{ person.isactive }}</td>
+    </tr>
+  </tbody>
+</table>
