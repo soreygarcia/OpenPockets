@@ -13,7 +13,7 @@ namespace OpenPockets.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string Id { get; set; }
         public string Name { get; set; }
-        public string IsInternal { get; set; }
+        public bool IsInternal { get; set; }
 
         public ICollection<Person> Members { get; set; }
         public ICollection<Pocket> Pockets { get; set; }

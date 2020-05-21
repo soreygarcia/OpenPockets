@@ -27,7 +27,7 @@ namespace OpenPockets.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    IsInternal = table.Column<string>(nullable: true)
+                    IsInternal = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -58,7 +58,7 @@ namespace OpenPockets.Migrations
                     Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: false),
                     Email = table.Column<string>(nullable: false),
-                    IsActive = table.Column<string>(nullable: false),
+                    IsActive = table.Column<bool>(nullable: false),
                     OrganizationId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

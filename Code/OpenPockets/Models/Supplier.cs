@@ -23,6 +23,6 @@ namespace OpenPockets.Models
         [Required]
         public string PhoneNumber { get; set; }
         [Required]
-        public string ContactName { get; set; }
+        public string ContactName { get; set; }        
     }
 }

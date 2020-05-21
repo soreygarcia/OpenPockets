@@ -17,6 +17,6 @@ namespace OpenPockets.Models
         [Required]
         public string Email { get; set; }
         [Required]
-        public string IsActive { get; set; }
+        public bool IsActive { get; set; }
     }
 }

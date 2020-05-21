@@ -32,7 +32,7 @@ namespace OpenPockets
             });
 
             services.AddDbContext<PocketsContext>(options =>
-            options.UseSqlServer(Configuration["ConnectionStrings:PocketDb"]));
+            options.UseSqlServer(Configuration["ConnectionStrings:OpenPocketsDb"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

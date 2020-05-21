@@ -34,7 +34,7 @@ namespace OpenPockets.DataAccess
                    .SetBasePath(Directory.GetCurrentDirectory())
                    .AddJsonFile("appsettings.json")
                    .Build();
-                var connectionString = configuration.GetConnectionString("PocketDb");
+                var connectionString = configuration.GetConnectionString("OpenPocketsDb");
                 optionsBuilder.UseSqlServer(connectionString);
             }
         }

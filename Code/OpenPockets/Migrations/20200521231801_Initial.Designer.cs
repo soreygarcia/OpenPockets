@@ -10,7 +10,7 @@ using OpenPockets.DataAccess;
 namespace OpenPockets.Migrations
 {
     [DbContext(typeof(PocketsContext))]
-    [Migration("20200515171740_Initial")]
+    [Migration("20200521231801_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,8 +92,8 @@ namespace OpenPockets.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("IsInternal")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("IsInternal")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -113,9 +113,8 @@ namespace OpenPockets.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IsActive")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()

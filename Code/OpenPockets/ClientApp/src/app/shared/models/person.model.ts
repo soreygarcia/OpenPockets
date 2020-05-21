@@ -1,6 +1,6 @@
-export interface PersonModel {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+export class PersonModel {
+  id: string;
+  name: string;
+  email: string;
+  isActive: boolean;
 }
